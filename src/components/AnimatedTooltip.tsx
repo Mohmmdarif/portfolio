@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { MouseEvent, useState } from "react";
 import {
   motion,
   useTransform,
@@ -32,9 +32,10 @@ export const AnimatedTooltip = ({
     useTransform(x, [-100, 100], [-50, 50]),
     springConfig
   );
-  const handleMouseMove = (event: any) => {
-    const halfWidth = event.target.offsetWidth / 2;
-    x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
+  const handleMouseMove = (event: MouseEvent<HTMLImageElement>) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const offsetX = event.clientX - rect.left;
+    x.set(offsetX - rect.width / 2);
   };
 
   return (
