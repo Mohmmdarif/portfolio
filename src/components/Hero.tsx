@@ -1,29 +1,54 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import ButtonWithIcon from "@/components/ButtonWithIcon";
 import IdentityHighlight from "@/components/IdentityHighlight";
 import { Download } from "lucide-react";
 
 const Hero = () => {
-  const BadgeContent = [
-    { text: "Web Development" },
-    { text: "Frontend Web Developer" },
-    { text: "Web Design" },
+  const BADGES = [
+    "Web Development",
+    "Frontend Web Developer",
+    "Web Design",
   ];
 
-  const badgeVariants = {
-    hidden: { opacity: 0, y: -50 },
+  // const badgeVariants = {
+  //   hidden: { opacity: 0, y: -50 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: {
+  //       duration: 1.4,
+  //       ease: "easeInOut",
+  //       staggerChildren: 0.2,
+  //       delayChildren: 0.5,
+  //     },
+  //   },
+  // };
+
+  const EASE_IN_OUT: [number, number, number, number] = [0.42, 0, 0.58, 1];
+
+  const parentVariants: Variants = {
+    hidden: { opacity: 0, y: -40 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1.4,
-        ease: "easeInOut",
-        delay: 0.5,
-        staggerChildren: 0.2,
+        duration: 0.7,
+        ease: EASE_IN_OUT,
+        staggerChildren: 0.18,
+        delayChildren: 0.25,
       },
+    },
+  };
+
+  const childVariants: Variants = {
+    hidden: { opacity: 0, y: -22 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.45, ease: EASE_IN_OUT },
     },
   };
 
@@ -33,23 +58,29 @@ const Hero = () => {
         className="flex gap-2"
         initial="hidden"
         animate="visible"
-        variants={badgeVariants}
+        variants={parentVariants}
       >
-        {BadgeContent.map((badge, index) => (
-          <Badge
-            key={index}
-            variant="outline"
-            className="rounded-full text-gray-600 text-base bg-gray-50 font-medium hidden md:block"
-          >
-            {badge.text}
-          </Badge>
+        {BADGES.map(text => (
+          <motion.div key={text} variants={childVariants} className="hidden md:block">
+            <Badge
+              variant="outline"
+              className="rounded-full text-gray-600 text-base bg-gray-50 font-medium"
+            >
+              {text}
+            </Badge>
+          </motion.div>
         ))}
-        <Badge
-          variant="outline"
-          className="rounded-full text-gray-600 text-sm bg-gray-50 z-20 font-medium md:hidden"
+        <motion.div
+          variants={childVariants}
+          className="md:hidden"
         >
-          Crafting Experiences That Matter
-        </Badge>
+          <Badge
+            variant="outline"
+            className="rounded-full text-gray-600 text-sm bg-gray-50 font-medium"
+          >
+            Crafting Experiences That Matter
+          </Badge>
+        </motion.div>
       </motion.div>
 
       <IdentityHighlight />
