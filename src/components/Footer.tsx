@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white py-5 px-5 text-center">
+    <footer className="w-full bg-background py-5 px-5 text-center">
       <h2 className="text-4xl font-semibold">
         Let’s <span className="text-gray-700">Connect</span>
       </h2>

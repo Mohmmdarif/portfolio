@@ -13,20 +13,6 @@ const Hero = () => {
     "Web Design",
   ];
 
-  // const badgeVariants = {
-  //   hidden: { opacity: 0, y: -50 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: {
-  //       duration: 1.4,
-  //       ease: "easeInOut",
-  //       staggerChildren: 0.2,
-  //       delayChildren: 0.5,
-  //     },
-  //   },
-  // };
-
   const EASE_IN_OUT: [number, number, number, number] = [0.42, 0, 0.58, 1];
 
   const parentVariants: Variants = {
@@ -64,7 +50,7 @@ const Hero = () => {
           <motion.div key={text} variants={childVariants} className="hidden md:block">
             <Badge
               variant="outline"
-              className="rounded-full text-gray-600 text-base bg-gray-50 font-medium"
+              className="rounded-full text-sm bg-gray-50 font-medium text-muted-foreground dark:text-foreground"
             >
               {text}
             </Badge>
@@ -76,7 +62,7 @@ const Hero = () => {
         >
           <Badge
             variant="outline"
-            className="rounded-full text-gray-600 text-sm bg-gray-50 font-medium"
+            className="rounded-full text-sm bg-gray-50 font-medium"
           >
             Crafting Experiences That Matter
           </Badge>

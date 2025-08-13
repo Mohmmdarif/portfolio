@@ -47,7 +47,7 @@ export const data = [
             status="Internship"
           />
 
-          <p className="mt-10 font-medium text-gray-500 mb-2 text-sm md:text-base">
+          <p className="mt-10 font-medium text-gray-500 dark:text-muted-foreground mb-2 text-sm md:text-base">
             Technology
           </p>
           <div className="flex flex-row items-center mb-3 w-full">
@@ -71,7 +71,7 @@ export const data = [
             status="Freelance"
           />
 
-          <p className="mt-10 font-medium text-gray-500 mb-2 text-sm md:text-base">
+          <p className="mt-10 font-medium text-gray-500 dark:text-muted-foreground mb-2 text-sm md:text-base">
             Technology
           </p>
           <div className="flex flex-row items-center mb-3 w-full">
@@ -106,7 +106,7 @@ export const data = [
             status="Internship"
           />
 
-          <p className="mt-10 font-medium text-gray-500 mb-2 text-sm md:text-base">
+          <p className="mt-10 font-medium text-gray-500 dark:text-muted-foreground mb-2 text-sm md:text-base">
             Technology
           </p>
           <div className="flex flex-row items-center mb-3 w-full">
@@ -137,7 +137,7 @@ export const data = [
             status="Seasonal"
           />
 
-          <p className="mt-10 font-medium text-gray-500 mb-2 text-sm md:text-base">
+          <p className="mt-10 font-medium text-gray-500 dark:text-muted-foreground mb-2 text-sm md:text-base">
             Technology
           </p>
           <div className="flex flex-row items-center mb-3 w-full">
@@ -169,7 +169,7 @@ export const data = [
             status="Internship"
           />
 
-          <p className="mt-10 font-medium text-gray-500 mb-2 text-sm md:text-base">
+          <p className="mt-10 font-medium text-gray-500 dark:text-muted-foreground mb-2 text-sm md:text-base">
             Technology
           </p>
           <div className="flex flex-row items-center mb-3 w-full">
@@ -206,7 +206,7 @@ export const data = [
             status="Internship"
           />
 
-          <p className="mt-10 font-medium text-gray-500 mb-2 text-sm md:text-base">
+          <p className="mt-10 font-medium text-gray-500 dark:text-muted-foreground mb-2 text-sm md:text-base">
             Technology
           </p>
           <div className="flex flex-row items-center mb-3 w-full">
@@ -231,7 +231,7 @@ export const data = [
             status="Seasonal"
           />
 
-          <p className="mt-10 font-medium text-gray-500 mb-2 text-sm md:text-base">
+          <p className="mt-10 font-medium text-gray-500 dark:text-muted-foreground mb-2 text-sm md:text-base">
             Technology
           </p>
           <div className="flex flex-row items-center mb-3 w-full">
